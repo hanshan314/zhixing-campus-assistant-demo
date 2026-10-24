@@ -1,0 +1,31 @@
+{
+  "lock_format": 2,
+  "source_root": "C:/Users/huang/Documents/ChatGPT/AI比赛相关/contracts",
+  "contract_version": "0.2.0",
+  "openapi_version": "3.1.0",
+  "fixture_version": "0.2.0",
+  "captured_at_utc": "2026-10-22T09:22:11Z",
+  "mode": "consumer_snapshot",
+  "files": [
+    {
+      "path": "upstream/openapi.json",
+      "source_path": "C:/Users/huang/Documents/ChatGPT/AI比赛相关/contracts/openapi.json",
+      "sha256": "56f6576725d0cb526c8118a95c12a1662cea90f8b107fc4912939ac315416ebf"
+    },
+    {
+      "path": "upstream/examples.json",
+      "source_path": "C:/Users/huang/Documents/ChatGPT/AI比赛相关/contracts/examples.json",
+      "sha256": "ce8419137008d52819c8028c1c40e707f92a3ef3d034d7ba3ef2a1b3a077b1d8"
+    },
+    {
+      "path": "upstream/validate.mjs",
+      "source_path": "C:/Users/huang/Documents/ChatGPT/AI比赛相关/contracts/validate.mjs",
+      "sha256": "3406512fd220dfd5523cb042a2c1fbfed72fe95060a637ba46be5574387487fa"
+    },
+    {
+      "path": "upstream/runtime-validator.mjs",
+      "source_path": "C:/Users/huang/Documents/ChatGPT/AI比赛相关/contracts/runtime-validator.mjs",
+      "sha256": "2e49cd3a575c608f2582952aaec65ed49c4d8e27d98ba2aa688193b70ad649d0"
+    }
+  ]
+}

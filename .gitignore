@@ -1,0 +1,12 @@
+.local/
+.data/
+**/.lock
+**/.dart_tool/
+**/build/
+**/.packages
+**/.flutter-plugins-dependencies
+*.db
+*.sqlite
+*.log
+Thumbs.db
+.DS_Store

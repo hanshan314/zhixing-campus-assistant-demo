@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-10-23T00:53:38.3875394-07:00",
+  "url": "http://127.0.0.1:18766/",
+  "served_root": "E:\\ai比赛\\交互端\\docs\\coordination\\demo-runs\\20261023-local-01\\web-current-local",
+  "freeze_sha256": "8a23cc67f37c4d70a25252d16d8b05d80d5130cc16f815d839bff09bc4979896",
+  "independent_review_sha256": "bf8d5d48b68c44bf02cb80fccf9d58b35c25388bcf39607d83acfddf0c2e7c40",
+  "assets": [
+    {
+      "file": "index.html",
+      "http_status": 200,
+      "bytes": 1637,
+      "sha256": "07849b118300113c8745c9b3b9a1fafda57108b2f199d028da1923a21760bad1",
+      "frozen_sha256": "07849b118300113c8745c9b3b9a1fafda57108b2f199d028da1923a21760bad1",
+      "matches_freeze": true
+    },
+    {
+      "file": "main.dart.js",
+      "http_status": 200,
+      "bytes": 2934758,
+      "sha256": "c35588a2dd3f3203077e7bc3d89b9f381a9d57df51d50ae050f071360fd79115",
+      "frozen_sha256": "c35588a2dd3f3203077e7bc3d89b9f381a9d57df51d50ae050f071360fd79115",
+      "matches_freeze": true
+    },
+    {
+      "file": "flutter_bootstrap.js",
+      "http_status": 200,
+      "bytes": 13119,
+      "sha256": "5ffc07e245087383bf70344f17fb5571528ef700035c5ed7cf91bd9f1bb2c581",
+      "frozen_sha256": "5ffc07e245087383bf70344f17fb5571528ef700035c5ed7cf91bd9f1bb2c581",
+      "matches_freeze": true
+    },
+    {
+      "file": "canvaskit/canvaskit.js",
+      "http_status": 200,
+      "bytes": 86987,
+      "sha256": "bb559f6080c7d312ac2a912b4abec9f68ff3d3022d4a603c7796b9b31460642b",
+      "frozen_sha256": "bb559f6080c7d312ac2a912b4abec9f68ff3d3022d4a603c7796b9b31460642b",
+      "matches_freeze": true
+    },
+    {
+      "file": "canvaskit/canvaskit.wasm",
+      "http_status": 200,
+      "bytes": 7284602,
+      "sha256": "fbed517a43e82452404446683f00f2e876d835aed84410695759e67b6bb01cd3",
+      "frozen_sha256": "fbed517a43e82452404446683f00f2e876d835aed84410695759e67b6bb01cd3",
+      "matches_freeze": true
+    },
+    {
+      "file": "assets/fonts/fallback/Roboto-Regular.ttf",
+      "http_status": 200,
+      "bytes": 171676,
+      "sha256": "79e851404657dac2106b3d22ad256d47824a9a5765458edb72c9102a45816d95",
+      "frozen_sha256": "79e851404657dac2106b3d22ad256d47824a9a5765458edb72c9102a45816d95",
+      "matches_freeze": true
+    }
+  ],
+  "all_assets_match": true,
+  "api_http_status": 200,
+  "api_mode": "demo",
+  "api_request_id": "req_9c5dbbf0-1b5d-4daf-9b56-c29b8465865c",
+  "browser_ui": "not_run",
+  "offline_cold_start": "not_run",
+  "phone_install": "not_run"
+}
