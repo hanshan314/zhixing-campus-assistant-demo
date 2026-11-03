@@ -1,0 +1,10 @@
+import { createServer } from 'node:http';
+import { randomBytes } from 'node:crypto';
+import { join } from 'node:path';
+import { createAccountStore } from './lib/accounts.js';
+import { createHandler } from './lib/http.js';
+const token = /^[a-f0-9]{64}$/.test(process.env.CLASS_PICKER_TOKEN || '') ? process.env.CLASS_PICKER_TOKEN : randomBytes(32).toString('hex');
+const store = await createAccountStore(process.env.CLASS_PICKER_DATA || join(import.meta.dirname, '.local-data', 'state.json'));
+const handler = createHandler({ store, token });
+const server = createServer(async (req, res) => { if (!(await handler(req, res))) { res.writeHead(302, { location: '/class-picker/' }); res.end(); } });
+server.listen(Number(process.env.PORT || 3217), '127.0.0.1', () => console.log(`账号与抽签工作台已启动：http://127.0.0.1:${server.address().port}/class-picker/#access=${token}`));

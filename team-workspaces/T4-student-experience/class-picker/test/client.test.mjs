@@ -1,0 +1,22 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import vm from 'node:vm';
+test('native Harness client registers an overlay and opens the authenticated picker iframe',async () => {
+  const source = await readFile(new URL('../client.js',import.meta.url),'utf8');
+  let loaded, registered, opened = false;
+  const React = { Fragment:'fragment',createElement:(type,props,...children) => ({ type,props,children }),useState:() => [opened,v => { opened = v; }],useRef:() => ({ current:null }),useEffect:() => {} };
+  const window = { __ModuleLoader__:{ load(value) { loaded = value; } },__DSH_CLASS_PICKER__:{ path:'/class-picker/',token:'test-token' } };
+  vm.runInNewContext(source,{ window });
+  assert.equal(loaded.id,'@local/dsh-class-picker');
+  const plugin = loaded.factory(name => { assert.equal(name,'react'); return React; });
+  const ctx = { slots:{ inject(slot,fn) { assert.equal(slot,'shell.overlay'); fn(); },register(options,render) { registered = { options,render }; return () => {}; } } };
+  plugin.apply(ctx);
+  assert.equal(registered.options.id,'class-picker');
+  const component = registered.render().type;
+  const closed = component(); closed.children[0].props.onClick();
+  assert.equal(opened,true);
+  const open = component();
+  const iframe = open.children[1].children.find(child => child.type === 'iframe');
+  assert.equal(iframe.props.src,'/class-picker/#access=test-token');
+});

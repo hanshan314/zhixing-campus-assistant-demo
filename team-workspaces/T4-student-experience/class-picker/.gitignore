@@ -1,0 +1,8 @@
+node_modules/
+.local-data/
+.test-data/
+artifacts/
+*.tgz
+*.zip
+*.sha256
+*.tar.gz

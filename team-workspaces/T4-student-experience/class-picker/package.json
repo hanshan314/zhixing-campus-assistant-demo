@@ -1,0 +1,15 @@
+{
+  "name": "@local/dsh-class-picker",
+  "version": "2.2.0",
+  "description": "本机账号与多场景抽签：老师抽班级、班级内抽签、社团抽签、学生会选人",
+  "type": "module",
+  "exports": { ".": "./index.js", "./client": "./client.js", "./icon": "./icon.svg", "./locale/*.json": "./locale/*.json" },
+  "files": ["index.js", "client.js", "lib", "web", "locale", "icon.svg", "cordis.patch.yml", "README.md"],
+  "scripts": { "start": "node dev-server.mjs", "test": "node --test test/*.test.mjs", "pack": "node scripts/pack.mjs" },
+  "engines": { "node": ">=20.11" },
+  "license": "MIT",
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-layout"] }
+  }
+}
